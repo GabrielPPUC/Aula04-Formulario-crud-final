@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style.css'%}" />
+  
+</head>
+
+<body>
+  <font color="white">
+  <div class="centralizado">
+  <h1><i><big>Gabriel Patrício de Oliveira</big></i></h1>
+  </div>      
+    <div class="centralizado">   
+    <h2><b>Quem sou eu?</b></h2>
+    <ul>
+      <li>Estudante da PUC-Rio</li>
+      <li>18 anos</li>
+      <li>Engenharia da Computação</li>
+      <li> <a href="https://www.instagram.com/gabri.patricio/" target="_blank">Instagram </a></li>
+    </ul>
+  <img src="{% static 'images/eu.png' %}" width="300">
+    </div>
+    <h2><br /></h2>    
+
+    
+    <div class="centralizado">
+    <h2><b>O que eu gosto de fazer</b></h2>
+    <!-- <ul>
+      <li>Jogar videogame competitivo</li>
+      <li>Jogar Xadrez</li>
+      <!-- <li>Estar com meus amigos e família</li>
+      <li>Estudar sobre a minha área</li>
+      <li>Viajar</li>
+      <li>Ver anime</li> -->
+    <!-- </ul> --> 
+     <ul>
+        {% for hobby in hobbies %}
+        <li>{{ hobby.titulo }}</li>
+        {% endfor %}
+      </ul>
+      <a href="/hobbies/create">Adicionar um novo hobby</a>
+    </div> 
+
+
+    <div class="centralizado">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d8ddfe70-0b23-4aef-8d58-769268414fcb/df8hkla-de1c17e1-ac29-48a2-8ea2-433f07674987.png/v1/fill/w_737,h_1085/monkey_d__luffy_bounty__one_piece_ch__1053__by_bryanfavr_df8hkla-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTg3MCIsInBhdGgiOiJcL2ZcL2Q4ZGRmZTcwLTBiMjMtNGFlZi04ZDU4LTc2OTI2ODQxNGZjYlwvZGY4aGtsYS1kZTFjMTdlMS1hYzI5LTQ4YTItOGVhMi00MzNmMDc2NzQ5ODcucG5nIiwid2lkdGgiOiI8PTEyNzAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Gn7ma_T7TG6-9eOvw5DCY3U0_JuxWc3yp6JC64Q12Io" width="300">
+    </div>
+    </div>
+    
+    <h2><br /></h2>
+
+
+    
+    <div class="centralizado">
+    <h2><b>Quais são minhas ambições</b></h2>
+      <ul>
+        <li>Independência Financeira</li>
+        <li>Morar no exterior</li>
+        <li>Criar uma empresa de sucesso</li>
+        <li>Desenvolver uma inteligência artifical</li>
+      </ul>
+      <img src="https://www.sertms.com/wp-content/uploads/2017/08/22916-NU6QN8.jpg" width="300">
+    </div>
+    <h2><br /></h2>
+  
+    
+    
+    <div class="centralizado">
+    <h2><b>Quais são meus jogos favoritos </b></h2>
+    <!-- <ol>
+      <li>CS:GO</li>
+      <li>Overwatch</li>
+      <li>Minecraft</li>
+    </ol> -->
+      <ol>
+   {% for game in acao %}
+      <li>
+         {{ game.titulo }}
+         <a href="/games/update/{{ game.id }}">Atualizar</a>
+         <a href="/games/delete/{{ game.id }}">Remover</a>
+      </li>
+   {% endfor %}
+</ol>
+
+      <a href="/games">Adicionar um novo jogo</a>
+    <div><img src="https://s3u.tmimgcdn.com/800x0/u2351089/4800f94bfbc64cf0f54b0571068825a1.jpg" width="300"></div>
+    </div>
+
+    <h2><br /></h2>
+    
+    
+    
+    <div class="centralizado">
+      <h2>Comidas e Bebidas favoritas</h2>
+        <ul>
+          <li>Café</li>
+          <li>Água de Coco</li>
+          <li>Suco de Uva</li>
+          <li>Hamburger</li>
+          <li>Açaí</li>
+          <li>Purê</li>
+        </ul>
+        <img src="https://www.gaz.com.br/uploads/2021/08/Cafe-xicara.jpg" width="300">
+    </div>
+  
+    <h2><br /></h2>
+
+
+    <div class="centralizado">
+    <h2>Minha Tabela de Horário das Aulas</h2>
+
+      <table>
+        <tr>
+          <td>XXX</td>
+          <td>S</td>
+          <td>T</td>
+          <td>Q</td>
+          <td>Q</td>
+          <td>S</td>
+        </tr>
+        <tr>
+          <td>7-9h</td>
+          <td>Prog C</td>
+          <td>Alg Lin</td>
+          <td>Prog C</td>
+          <td>Alg Lin</td>
+          <td>XXX</td>
+        </tr>
+        <tr>
+          <td>9-11h</td>
+          <td>Calculo</td>
+          <td>Calculo</td>
+          <td>Calculo</td>
+          <td>XXX</td>
+          <td>Física</td>
+        </tr>
+        <tr>
+          <td>11-13</td>
+          <td>XXX</td>
+          <td>Proj</td>
+          <td>XXX</td>
+          <td>Emp</td>
+          <td>Fisica</td>
+        </tr>
+        <tr>
+          <td>13-15</td>
+          <td>Logica</td>
+          <td>XXX</td>
+          <td>Logica</td>
+          <td>XXX</td>
+          <td>XXX</td>
+        </tr>
+
+
+        
+      </table>
+      
+      
+    </div>
+
+    
+    
+    <h2><br /></h2>
+    
+    
+    <div class="centralizado">
+    <p style = 'font-size: 25px'><b>Uma breve apresentação sobre quem sou, o que gosto de fazer, minhas ambições, jogos favoritos, comidas e bebidas favoritas.</b> </p>  
+    </div>
+  </font>
+</body>
+
+</html>

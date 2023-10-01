@@ -1,0 +1,27 @@
+<h1>{{ acao }} Adicione um jogo</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Titulo:</label>
+    <input name="title" value="{{ games.titulo }}">
+  </div>
+  <div>
+    <label>Frequencia</label>
+    <input type="number" name="frequencia" value="{{ games.frequencia }}">
+  </div>
+  <label>Esforco Computacional:</label>
+  <input name="EsforcoComputacional" value="{{ game.esforcoComputacional }}" >
+  <div>
+    <label>Competitivo:</label>
+    <input name="BoolenCompetitivo" value="{{ games.competitivo }}">
+  </div>
+  <div>
+    <label>Genero</label>
+    <input name="Genero" value="{{ games.genero }}">
+  </div>
+
+
+
+  <input type="submit" value="Registrar">
+  </form>

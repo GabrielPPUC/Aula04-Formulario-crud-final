@@ -1,0 +1,10 @@
+Voce tem certeza que deseja deletar o jogo: "{{ game.title }}"?
+
+
+<form method="post">
+   {% csrf_token %}
+
+<input type="submit" name="confirma" value="Sim">
+<input type="submit" value="Nao">
+
+</form>
