@@ -25,4 +25,4 @@ urlpatterns = [
     path('games/delete/<id>', views.delete_game),
   path('hobbies/create/', views.create_hobby, name='create_hobby'),
     path('hobbies/update/<int:id>/', views.update_hobby, name='update_hobby'), 
-    path('hobbies/delete/<int:id>/', views.delete_hobby, name='delete_hobby'),
+    path('hobbies/delete/<int:id>/', views.delete_hobby, name='delete_hobby'),]
